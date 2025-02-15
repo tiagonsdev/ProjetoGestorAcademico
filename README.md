@@ -1,5 +1,5 @@
 # ProjetoGestorAcademico
-Projeto em conjunto com Henry Ceresetti de um sistema de gestão acadêmica Com Git e Jira
+Projeto em conjunto com Henry Ceresetti de um sistema de gestão acadêmica com Git e Jira
 
 
 System Design - Gestor Acadêmico
