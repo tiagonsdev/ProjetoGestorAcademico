@@ -8,6 +8,7 @@ create table aluno(
     rg varchar(30)
 );
 
+
 create table professor(
 	ra_professor_id int not null primary key,
     nome varchar(30) not null,
@@ -23,10 +24,15 @@ create table coordenador(
 );
 
 create table diretor(
-	ra_diretor int not null primary key,
+	ra_diretor_id int not null primary key,
     nome varchar(30) not null,
     cpf varchar(30),
     rg varchar(30)
+);
+
+create table administrador(
+    ra_administrador_id int not null primary key,
+    nome varchar(30)
 );
 
 create table disciplinas(
@@ -44,7 +50,9 @@ create table curso(
 	disciplina_id int not null,
     foreign key (disciplina_id) references disciplinas(disciplina_id) on delete cascade,
     ra_coordenador_id int not null,
-    foreign key (ra_coordenador_id) references coordenador(ra_coordenador_id) on delete cascade
+    foreign key (ra_coordenador_id) references coordenador(ra_coordenador_id) on delete cascade,
+    ra_administrador_id int not null,
+    foreign key (ra_administrador_id) references administrador(ra_administrador_id) on delete cascade 
 );
 
 select * from curso
